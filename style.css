@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto+Condensed:wght@300&family=Roboto+Mono:wght@100&family=Roboto:wght@100&family=Rubik:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Merriweather:wght@900&display=swap');
 *,*::after,*::before {
     padding: 0;
     margin: 0;
@@ -9,9 +10,14 @@
     --dark: #0F4C75;
     --light: #3282B8;
     --extra-light: #BBE1FA;
+    /* --extra-dark: #121212;
+    --dark: #30475e;
+    --light: #f05454;
+    --extra-light: #f5f5f5; */
 }
 body {
     width: 100vw;
+    height: 100vh;
     background-color: var(--extra-dark);
     font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
@@ -31,8 +37,9 @@ header {
 }
 .logo {
     color: var(--extra-light);
-    font-size: 36px;
+    font-size: 46px;
     cursor: pointer;
+    font-family: 'Dancing Script', cursive;
 }
 nav {
     display: flex;
@@ -127,6 +134,7 @@ main h1 {
     font-size: clamp(40px,4vw,80px);
     color: var(--light);
     margin-bottom: 10px;
+    font-weight: 700;
 }
 main h2 {
     font-size: clamp(40px,4vw,80px);
@@ -271,6 +279,7 @@ main a:hover {
 }
 .contact {
     padding: 5vw 15vw;
+    position: relative;
 }
 .contact h2 {
     font-size: clamp(30px,3vw,60px);
@@ -348,7 +357,32 @@ textarea {
     width: 20px;
     height: 20px;
 }
-
+.done {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .7);
+    display: none;
+}
+.done h3 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--extra-light);
+    color: var(--extra-dark);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    line-height: 100px;
+    text-align: center;
+    font: 25px;
+    font-weight: 600;
+}
 @media (max-width:850px) {
     nav a {
         padding: 0 15px;
